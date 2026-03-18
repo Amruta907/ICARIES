@@ -10,7 +10,7 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
     preview: {
-      allowedHosts: ["icarie-2.onrender.com", "localhost"],
+      allowedHosts: ["icarie-4.onrender.com", "localhost"],
     },
   },
 });
