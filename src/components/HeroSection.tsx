@@ -27,8 +27,8 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-sm text-primary font-medium">
-          {/* IEEE Conference Record Number:{" "} */}
-          {/* <a href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/69723" className="underline hover:text-teal-glow" target="_blank" rel="noopener noreferrer">
+          {/* ICARIES Conference Record Number:{" "} */}
+          {/* <a href="https://conferences.ICARIES.org/conferences_events/conferences/conferencedetails/69723" className="underline hover:text-teal-glow" target="_blank" rel="noopener noreferrer">
             69723
           </a> */}
         </p>

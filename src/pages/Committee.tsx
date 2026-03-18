@@ -117,7 +117,7 @@ const Committee = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white">
+    <div className="min-h-screen bg-white text-white">
       <Navbar />
 
       <main className="pt-32 pb-20 px-4">

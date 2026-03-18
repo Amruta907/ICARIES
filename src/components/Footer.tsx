@@ -5,7 +5,7 @@ const Footer = () => {
     <footer id="contact" className="bg-card border-t border-border py-12 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="font-heading font-bold text-xl text-primary mb-3">IEEE 2026</h3>
+          <h3 className="font-heading font-bold text-xl text-primary mb-3">ICARIES 2026</h3>
           <p className="text-sm text-muted-foreground">
             International Conference on Automation and Resilient Innovative Expert System ICARIES
           </p> 
@@ -29,13 +29,13 @@ const Footer = () => {
             </p>
             <p className="flex items-center gap-2">
               <Mail size={14} className="text-primary" />
-              info@IEEE.in
+              info@ICARIES.in
             </p>
           </div>
         </div>
       </div>
       <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-border text-center text-xs text-muted-foreground">
-        © 2026 IEEE. All rights reserved. | PRMITR Badnera, India
+        © 2026 ICARIES. All rights reserved. | PRMITR Badnera, India
       </div>
     </footer>
   );

@@ -11,7 +11,7 @@ const AuthorGuidelines = () => {
     "The author can submit a maximum of 03 papers. However, each paper needs to be registered separately.",
     "Page limit is of maximum 06 pages. You may submit a paper of up to 8 pages with an additional cost of 500 per extra page.",
     "Student registrants must upload proof of their Institute ID during the online registration.",
-    "IEEE members must upload a valid IEEE membership card during the online registration.",
+    "ICARIES members must upload a valid ICARIES membership card during the online registration.",
     "Tables, figures and images should have appropriate captions and be of good quality (dpi = 400). Each of these items must be cited inline in the main text of the manuscript.",
     "The full article must be submitted as a MS Word file in DOC or DOCX format with proper title.",
     "Before submitting your paper, please ensure that the English used is clear, concise and coherent. This is especially important if English is not your first language.",
@@ -32,7 +32,7 @@ const AuthorGuidelines = () => {
 
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white">
+    <div className="min-h-screen bg-white text-white">
       <Navbar />
       <main className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto">
@@ -80,7 +80,7 @@ const AuthorGuidelines = () => {
               {importantDates.map((item, index) => (
                 <div
                   key={index}
-                  className="flex justify-between items-center px-5 py-4 bg-[#020617] hover:bg-[#111827] transition-colors"
+                  className="flex justify-between items-center px-5 py-4 bg-white hover:bg-[#111827] transition-colors"
                 >
                   <span className="text-slate-300 text-sm md:text-base">
                     {item.title}
@@ -102,7 +102,7 @@ const AuthorGuidelines = () => {
     Submit Research Paper
   </h2>
 
-  <div className="border border-white/5 rounded-xl p-6 bg-[#020617] space-y-4">
+  <div className="border border-white/5 rounded-xl p-6 bg-white space-y-4">
     
     <p className="text-slate-300 leading-relaxed text-sm md:text-base">
       Authors are invited to submit their original and unpublished research papers
