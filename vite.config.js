@@ -14,8 +14,8 @@ export default defineConfig({
     host: true,
     port: 3000,
     strictPort: true,
-    preview: {
-  allowedHosts: "icaries-prmitr.onrender.com",
-}
+  },
+  preview: {
+    allowedHosts: ["icaries-prmitr1.onrender.com", "localhost"],
   },
 });
