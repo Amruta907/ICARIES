@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Committee - ICARIES</title>
+    <meta name="description" content="Committee members of ICARIES 2026" />
+    <link rel="stylesheet" href="styles-vanilla.css" />
+    <style>
+      .committee-header {
+        text-align: center;
+        margin-bottom: 5rem;
+        padding-top: 2rem;
+      }
+
+      .committee-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .committee-divider {
+        width: 96px;
+        height: 4px;
+        background-color: var(--primary);
+        margin: 0 auto;
+        border-radius: 9999px;
+      }
+
+      .committee-section {
+        margin-bottom: 6rem;
+      }
+
+      .committee-section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--foreground);
+        margin-bottom: 2.5rem;
+        padding-left: 1rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      .members-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .member-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .member-card:hover {
+        border-color: rgba(74, 189, 172, 0.4);
+        box-shadow: 0 0 25px rgba(74, 189, 172, 0.15);
+      }
+
+      .member-avatar-wrapper {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+
+      .member-avatar-bg {
+        position: absolute;
+        inset: 0;
+        border-radius: 9999px;
+        background-color: rgba(74, 189, 172, 0.1);
+        scale: 1.1;
+      }
+
+      .member-avatar {
+        position: relative;
+        width: 96px;
+        height: 96px;
+        border-radius: 9999px;
+        border: 2px solid rgba(74, 189, 172, 0.3);
+        background-color: rgba(31, 41, 55, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: border-color 0.3s ease;
+      }
+
+      .member-card:hover .member-avatar {
+        border-color: var(--primary);
+      }
+
+      .member-name {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: white;
+        transition: color 0.3s ease;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        max-width: 100%;
+      }
+
+      .member-card:hover .member-name {
+        color: var(--primary);
+      }
+
+      .member-org {
+        font-size: 0.875rem;
+        color: var(--muted-foreground);
+        margin-top: 0.5rem;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 768px) {
+        .committee-title {
+          font-size: 2rem;
+        }
+
+        .members-grid {
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 1rem;
+        }
+
+        .member-card {
+          padding: 1.5rem;
+        }
+
+        .member-avatar {
+          width: 72px;
+          height: 72px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .committee-title {
+          font-size: 1.5rem;
+        }
+
+        .members-grid {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+
+        .member-name {
+          font-size: 0.95rem;
+        }
+
+        .member-org {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index-vanilla.html" class="navbar-logo">IEEE</a>
+        
+        <button class="menu-toggle" id="menuToggle">
+          <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <a href="index-vanilla.html#home" class="nav-link">HOME</a>
+          <a href="index-vanilla.html#about" class="nav-link">ABOUT</a>
+          <a href="committee.html" class="nav-link">COMMITTEE</a>
+          <a href="author-guidelines.html" class="nav-link">FOR AUTHORS</a>
+          <a href="index-vanilla.html#program" class="nav-link">PROGRAM</a>
+          <a href="index-vanilla.html#about" class="nav-link">VENUE</a>
+          <a href="index-vanilla.html#sponsors" class="nav-link">SPONSORSHIP</a>
+          <a href="index-vanilla.html#contact" class="nav-link">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: 6rem; padding-bottom: 5rem;">
+      <div class="section-container">
+        <!-- Header -->
+        <div class="committee-header">
+          <h1 class="committee-title">Committee</h1>
+          <div class="committee-divider"></div>
+        </div>
+
+        <!-- International Committee -->
+        <section class="committee-section">
+          <h2 class="committee-section-title">International Committee</h2>
+          <div class="members-grid">
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Amruta Deshmukh</h3>
+              <p class="member-org">Ciena Corporation, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Mr. Saurabh Deshmukh</h3>
+              <p class="member-org">Senior Data Architect, Cognizant, UK</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Vinothkumar Kolluru</h3>
+              <p class="member-org">Senior Professional, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Apoorv Sawale</h3>
+              <p class="member-org">Sr ETL Developer, ARAG Legal Insurance, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Mangesh Pimprikar</h3>
+              <p class="member-org">Technical Manager/Architect, Cognizant, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Vinay Purushe</h3>
+              <p class="member-org">Consultant, TCS, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Pooja Rajurkar</h3>
+              <p class="member-org">Enterprisewide Manager, Siemens Healthineers, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Hrishav Kumar</h3>
+              <p class="member-org">SAP Operations Technical Lead, C&A, Germany</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Mr. Nilesh Sarode</h3>
+              <p class="member-org">Software Engineer, United Health Group, Ireland</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Amruta Chorey</h3>
+              <p class="member-org">Business Analyst, Blue Cross Blue Shield, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Ms. Rashi Dhande</h3>
+              <p class="member-org">Software Engineer, Progyny, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Kunal Mhapsekar</h3>
+              <p class="member-org">Senior Mechanical Engineer, Zipline International, USA</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Palash Sukhdeo Deulkar</h3>
+              <p class="member-org">Senior Engineer, LTM, USA</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Program Committee -->
+        <section class="committee-section">
+          <h2 class="committee-section-title">Technical Program Committee</h2>
+          <div class="members-grid">
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Roshan Bodile</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Ms. M. S. Deshmukh</h3>
+              <p class="member-org">Assistant Prof, PRMITR, Badnera</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. R. R. Karwa</h3>
+              <p class="member-org">Assistant Prof, PRMITR, Badnera</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Shital Raut</h3>
+              <p class="member-org">Professor, VNIT, Nagpur</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. A. S. Tiwari</h3>
+              <p class="member-org">VNIT, Nagpur</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Rohit Singh</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Kundan Kumar</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Aijaz Mehdi Zaidi</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Sachchidanand</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. V. Narasimha Nayak</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Kappala Vinod Kiran</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Somesula Manoj Kumar</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Banalaxmi Brahma</h3>
+              <p class="member-org">NIT Jalandhar</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Jailsingh Bhookya</h3>
+              <p class="member-org">NIT Calicut</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Gautam Borkar</h3>
+              <p class="member-org">Professor, RAIT, Navi Mumbai</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Sunil Wankhade</h3>
+              <p class="member-org">Head & Professor</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Ankush Hutke</h3>
+              <p class="member-org">Assistant Professor, RGIT Mumbai</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Shivaji Lahane</h3>
+              <p class="member-org">GES R.H. Sapat COE, Nashik</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Umesh Kokate</h3>
+              <p class="member-org">Technical Director, MSBTE</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Mr. Hemant Rajkule</h3>
+              <p class="member-org">CEO, ASPEN Systems & Software, Pune</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Mr. Roshan Halmare</h3>
+              <p class="member-org">Lead Database Administrator, Global Payments</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Sapana Kawle</h3>
+              <p class="member-org">Data Analyst, Nvidia</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Ankush D. Sawarkar</h3>
+              <p class="member-org">Assistant Professor, SGGSIE&T, Nanded</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Prof. R. R. Papalkar</h3>
+              <p class="member-org">Assistant Professor, VIT Pune</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Shreyash R. Hole</h3>
+              <p class="member-org">Assistant Professor, SIT Nagpur</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Shyam Sharma</h3>
+              <p class="member-org">Technical Lead, Wipro Technologies</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Pratik B. Raut</h3>
+              <p class="member-org">Sr. Dev. Engg. Manager, Asimily India</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Sheetal S. Dhande</h3>
+              <p class="member-org">Assistant Professor, Sipna COE, Amravati</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Yogesh Thakare</h3>
+              <p class="member-org">SRCOEM, Nagpur</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Jayendra Jadhav</h3>
+              <p class="member-org">Technical Committee Member</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Prof. (Dr.) Satish N. Gujar</h3>
+              <p class="member-org">Professor & Head, JSPM University Pune</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Sandeep S. Deshmukh</h3>
+              <p class="member-org">Professor, BITS Pilani, Hyderabad</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Shyamkumar Kalpande</h3>
+              <p class="member-org">Professor & Head, MET, Nashik</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Vishal Sulakhe</h3>
+              <p class="member-org">HOD Mechanical, Sandeep University Nashik</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Arun Thakare</h3>
+              <p class="member-org">Associate Professor, GH Raisoni, Pune</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Sunil Dambhare</h3>
+              <p class="member-org">Director IQAC, DY Patil University, Pune</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Sanjay Pohekar</h3>
+              <p class="member-org">Head, Research Programs, Symbiosis, Pune</p>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar-wrapper">
+                <div class="member-avatar-bg"></div>
+                <div class="member-avatar"></div>
+              </div>
+              <h3 class="member-name">Dr. Avinash D. Gawande</h3>
+              <p class="member-org">Professor, Sipna COE, Amravati</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>IEEE 2026</h3>
+            <p>International Conference on Automation and Resilient Innovative Expert System ICARIES</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="index-vanilla.html#home">Home</a>
+              <a href="committee.html">Committee</a>
+              <a href="author-guidelines.html">For Authors</a>
+              <a href="index-vanilla.html#program">Program</a>
+              <a href="index-vanilla.html#about">Venue</a>
+              <a href="index-vanilla.html#contact">Contact</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <div class="footer-contact">
+              <p>
+                <svg class="footer-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                PRMITR Amravati, Maharashtra, India
+              </p>
+              <p>
+                <svg class="footer-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                info@IEEE.in
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © 2026 IEEE. All rights reserved. | PRMITR Badnera, India
+        </div>
+      </div>
+    </footer>
+
+    <script src="main-vanilla.js"></script>
+  </body>
+</html>

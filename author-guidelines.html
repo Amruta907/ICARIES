@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Author Guidelines - ICARIES</title>
+    <meta name="description" content="Author Guidelines for ICARIES 2026" />
+    <link rel="stylesheet" href="styles-vanilla.css" />
+    <style>
+      .guidelines-header {
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .guidelines-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .guidelines-subtitle {
+        color: var(--muted-foreground);
+        font-size: 0.95rem;
+      }
+
+      .guidelines-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 4rem;
+      }
+
+      .guideline-item {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: background-color 0.3s ease;
+      }
+
+      .guideline-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .guideline-number {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 9999px;
+        background-color: rgba(74, 189, 172, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+
+      .guideline-text {
+        color: var(--muted-foreground);
+        line-height: 1.6;
+        flex: 1;
+      }
+
+      .notes-section {
+        padding: 2rem;
+        border-radius: 1rem;
+        background: linear-gradient(135deg, rgba(74, 189, 172, 0.05) 0%, rgba(74, 189, 172, 0.03) 100%);
+        border: 1px solid rgba(74, 189, 172, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .notes-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        opacity: 0.1;
+        width: 160px;
+        height: 160px;
+      }
+
+      .notes-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .notes-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .notes-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .note-item {
+        color: var(--muted-foreground);
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+
+      .note-item.highlight {
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .guidelines-title {
+          font-size: 1.75rem;
+        }
+
+        .guideline-item {
+          padding: 0.75rem;
+          gap: 0.75rem;
+        }
+
+        .notes-section {
+          padding: 1.5rem;
+        }
+
+        .notes-icon {
+          width: 120px;
+          height: 120px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .guidelines-title {
+          font-size: 1.5rem;
+        }
+
+        .guideline-number {
+          width: 28px;
+          height: 28px;
+          font-size: 0.75rem;
+        }
+
+        .guideline-text {
+          font-size: 0.875rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index-vanilla.html" class="navbar-logo">IEEE</a>
+        
+        <button class="menu-toggle" id="menuToggle">
+          <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <a href="index-vanilla.html#home" class="nav-link">HOME</a>
+          <a href="index-vanilla.html#about" class="nav-link">ABOUT</a>
+          <a href="committee.html" class="nav-link">COMMITTEE</a>
+          <a href="author-guidelines.html" class="nav-link">FOR AUTHORS</a>
+          <a href="index-vanilla.html#program" class="nav-link">PROGRAM</a>
+          <a href="index-vanilla.html#about" class="nav-link">VENUE</a>
+          <a href="index-vanilla.html#sponsors" class="nav-link">SPONSORSHIP</a>
+          <a href="index-vanilla.html#contact" class="nav-link">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: 6rem; padding-bottom: 5rem;">
+      <div class="section-container">
+        <!-- Header -->
+        <div class="guidelines-header">
+          <h1 class="guidelines-title">Author Guidelines</h1>
+          <p class="guidelines-subtitle">Please follow these instructions carefully to ensure your submission is processed correctly.</p>
+        </div>
+
+        <!-- Guidelines -->
+        <div class="guidelines-content">
+          <div class="guideline-item">
+            <div class="guideline-number">1</div>
+            <p class="guideline-text">The paper should be original and should not have been published anywhere else or be under review for any journal or other conferences.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">2</div>
+            <p class="guideline-text">A paper should not have more than Five authors.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">3</div>
+            <p class="guideline-text">The author can submit a maximum of 03 papers. However, each paper needs to be registered separately.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">4</div>
+            <p class="guideline-text">Page limit is of maximum 06 pages. You may submit a paper of up to 8 pages with an additional cost of 500 per extra page.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">5</div>
+            <p class="guideline-text">Student registrants must upload proof of their Institute ID during the online registration.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">6</div>
+            <p class="guideline-text">IEEE members must upload a valid IEEE membership card during the online registration.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">7</div>
+            <p class="guideline-text">Tables, figures and images should have appropriate captions and be of good quality (dpi = 400). Each of these items must be cited inline in the main text of the manuscript.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">8</div>
+            <p class="guideline-text">The full article must be submitted as a MS Word file in DOC or DOCX format with proper title.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">9</div>
+            <p class="guideline-text">Before submitting your paper, please ensure that the English used is clear, concise and coherent. This is especially important if English is not your first language.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">10</div>
+            <p class="guideline-text">All submissions with less than 15% similarity will only be eligible for review, with the quality and scope of the work being taken into consideration.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">11</div>
+            <p class="guideline-text">Once the full paper is accepted, the author(s) will be requested to submit the copyright transfer form.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">12</div>
+            <p class="guideline-text">Any paper that does not follow the guidelines may not be considered for publication in the conference proceedings.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">13</div>
+            <p class="guideline-text">All the accepted papers must be revised with due comments and suggestions given by reviewers before the deadlines.</p>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-number">14</div>
+            <p class="guideline-text">The Publisher maintains the right to exclude any papers from the work if they are deemed unsuitable for publication.</p>
+          </div>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="notes-section">
+          <div class="notes-content">
+            <h3 class="notes-title">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              Important Notes
+            </h3>
+            <div class="notes-list">
+              <div class="note-item">• At least one author has to register for the paper to be included in the proceedings.</div>
+              <div class="note-item">• Only registered authors will be allowed to present and receive certificates.</div>
+              <div class="note-item">• Keep a copy of your transaction ID and bank receipt to track your registration.</div>
+              <div class="note-item highlight">• The committee is not responsible for financial losses caused by improper transactions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>IEEE 2026</h3>
+            <p>International Conference on Automation and Resilient Innovative Expert System ICARIES</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="index-vanilla.html#home">Home</a>
+              <a href="committee.html">Committee</a>
+              <a href="author-guidelines.html">For Authors</a>
+              <a href="index-vanilla.html#program">Program</a>
+              <a href="index-vanilla.html#about">Venue</a>
+              <a href="index-vanilla.html#contact">Contact</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <div class="footer-contact">
+              <p>
+                <svg class="footer-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                PRMITR Amravati, Maharashtra, India
+              </p>
+              <p>
+                <svg class="footer-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                info@IEEE.in
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © 2026 IEEE. All rights reserved. | PRMITR Badnera, India
+        </div>
+      </div>
+    </footer>
+
+    <script src="main-vanilla.js"></script>
+  </body>
+</html>

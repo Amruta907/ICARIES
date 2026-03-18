@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 50% 8%;
+    --foreground: 210 40% 96%;
+
+    --card: 216 45% 12%;
+    --card-foreground: 210 40% 96%; 
+
+    
+    --popover: 216 45% 12%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 174 72% 48%;
+    --primary-foreground: 216 50% 8%;
+
+    --secondary: 216 40% 16%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 216 35% 18%;
+    --muted-foreground: 215 20% 60%; 
+
+    --accent: 174 72% 48%;
+    --accent-foreground: 216 50% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 30% 22%;
+    --input: 216 30% 22%;
+    --ring: 174 72% 48%;
+
+    --radius: 0.5rem;
+
+    --hero-gradient: linear-gradient(180deg, hsl(216 50% 6%) 0%, hsl(216 50% 12%) 100%);
+    --teal: 174 72% 48%;
+    --teal-glow: 174 72% 58%;
+    --navy-deep: 216 55% 6%;
+    --navy-mid: 216 45% 14%;
+    --gold: 45 90% 55%;
+    --announcement-bg: 0 84% 55%;
+
+    --sidebar-background: 216 50% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 174 72% 48%;
+    --sidebar-primary-foreground: 216 50% 8%;
+    --sidebar-accent: 216 40% 16%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 216 30% 22%;
+    --sidebar-ring: 174 72% 48%;
+    
+  }
+} 
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .hero-section {
+    background: var(--hero-gradient);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .countdown-box {
+    @apply bg-secondary/80 backdrop-blur-sm border border-border rounded-lg px-4 py-3 text-center min-w-[80px];
+  }
+
+  .countdown-number {
+    @apply text-3xl md:text-4xl font-bold font-heading text-foreground;
+  }
+
+  .countdown-label {
+    @apply text-xs text-muted-foreground uppercase tracking-wider;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-heading text-primary mb-2;
+  }
+
+  .section-divider {
+    @apply w-16 h-1 bg-primary rounded-full mt-3 mb-6;
+  }
+
+  .date-card {
+    @apply bg-card border border-border rounded-xl p-6 text-center hover:border-primary/50 transition-colors;
+  }
+
+  .speaker-card {
+    @apply bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10;
+  }
+
+  .sponsor-logo {
+    @apply bg-foreground/90 rounded-xl p-4 flex items-center justify-center h-24 hover:scale-105 transition-transform;
+  }
+
+  .testimonial-card {
+    @apply bg-card border border-border rounded-xl p-6 min-w-[300px] max-w-[400px] flex-shrink-0;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-muted-foreground hover:text-primary transition-colors;
+  }
+
+  .announcement-bar {
+    @apply bg-secondary border-t border-border py-3 px-4;
+  }
+
+  .btn-hero-primary {
+    @apply bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-full hover:bg-[hsl(var(--teal-glow))] transition-colors;
+  }
+
+  .btn-hero-outline {
+    @apply border-2 border-primary text-primary font-semibold px-8 py-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors;
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
