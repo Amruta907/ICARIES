@@ -1,16 +1,21 @@
 // vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
   server: {
-    // Add your Render URL here:
     host: true,
     port: 3000,
     strictPort: true,
     preview: {
-      allowedHosts: ["icarie-4.onrender.com", "localhost"],
+      allowedHosts: ["icarie-5.onrender.com", "localhost"],
     },
   },
 });
